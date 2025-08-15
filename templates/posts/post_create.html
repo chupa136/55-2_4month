@@ -1,9 +1,9 @@
-{% extends 'home.html'%}
+{% extends 'home.html' %}
 
 {% block content %}
-<from style="padding: 15px;" action = "" method ="post", enctype ="multipart/form-data">
+<form style="padding: 15px;" action="" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    {{ form.as_p}}
-    <button text = "submit">Create post</button>
-</from>
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Create post</button>
+</form>
 {% endblock %}
