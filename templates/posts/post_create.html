@@ -1,0 +1,9 @@
+{% extends 'home.html'%}
+
+{% block content %}
+<from style="padding: 15px;" action = "" method ="post", enctype ="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button text = "submit">Create post</button>
+</from>
+{% endblock %}
