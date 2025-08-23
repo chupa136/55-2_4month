@@ -21,9 +21,9 @@
 </div>
 {% endfor %}
     <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
-      {% for i in max_pages%}
-        <a href="/posts/?page={{ i }}" class=""btn btn-primary>
-          (( i ))
+      {% for i in max_pages %}
+        <a href="/posts/?page={{ i }}" class="btn btn-primary">
+          {{ i }}
         </a>
       {% endfor %}
     </div>

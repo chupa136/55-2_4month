@@ -1,5 +1,5 @@
 from django import forms
-from posts.models import Post, Category, Tag
+from posts.models import Comment, Post, Category, Tag
 
 class PostForm(forms.Form):
     image = forms.ImageField(required=False)
@@ -38,3 +38,14 @@ class SearchForm(forms.Form):
     )
 
     ordering = forms.ChoiceField(choices=orderings, required=False)
+
+class PostUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ( "image", "title", "content","category")
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['text']
